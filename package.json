@@ -1,0 +1,23 @@
+{
+  "name": "nodejs-spa-mall",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WON-JIN-LEE/nodejs-spa-mall.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WON-JIN-LEE/nodejs-spa-mall/issues"
+  },
+  "homepage": "https://github.com/WON-JIN-LEE/nodejs-spa-mall#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
