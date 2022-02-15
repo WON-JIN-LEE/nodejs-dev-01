@@ -1,5 +1,5 @@
 {
-  "name": "nodejs-spa-mall",
+  "name": "nodejs-dev-01",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -8,16 +8,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/WON-JIN-LEE/nodejs-spa-mall.git"
+    "url": "git+https://github.com/WON-JIN-LEE/nodejs-dev-01.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/WON-JIN-LEE/nodejs-spa-mall/issues"
+    "url": "https://github.com/WON-JIN-LEE/nodejs-dev-01/issues"
   },
-  "homepage": "https://github.com/WON-JIN-LEE/nodejs-spa-mall#readme",
+  "homepage": "https://github.com/WON-JIN-LEE/nodejs-dev-01#readme",
   "dependencies": {
-    "express": "^4.17.2"
+    "express": "^4.17.2",
+    "moment": "^2.29.1",
+    "mongoose": "^6.2.1",
+    "mongoose-auto-increment": "^5.0.1"
   }
 }

@@ -1,15 +1,24 @@
 const express = require("express");
+
+// index 파일명은 생략가능
+const connet = require("./schemas");
 const app = express();
-
 const port = 3000;
-const goodsRouter = require("./routes/goods");
 
-app.use((req, res, next) => {
+connet();
+const postsRouter = require("./routes/posts");
+
+
+const requestMiddleware = (req, res, next) => {
   console.log("Request URL: ", req.originalUrl, "-", new Date());
   next();
-});
+};
 
-app.use("/api", [goodsRouter]);
+app.use(express.urlencoded());
+app.use(express.json());
+app.use(requestMiddleware);
+
+app.use("/api", [postsRouter]);
 
 app.get("/", (req, res) => {
   res.send("hello world");
