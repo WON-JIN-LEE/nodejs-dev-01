@@ -36,7 +36,7 @@ router.post("/posts", async (req, res) => {
 
     await Posts.create({name, title, content});
 
-    res.send({success: true});
+    res.status(201).send({ success: true });
 });
 
 // 게시글 수정 API
@@ -109,7 +109,7 @@ router.post("/posts/:postId/comments", async (req, res) => {
 
     await Comments.create({name, comment, post_id: postId});
 
-    res.send({success: true});
+    res.status(201).send({ success: true });
 });
 
 // 댓글 수정 API
