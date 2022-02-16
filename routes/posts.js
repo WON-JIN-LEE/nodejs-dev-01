@@ -15,7 +15,7 @@ router.get("/posts", async (req, res) => {
     res.json({posts: posts});
 });
 
-// 게시글 상세페이지 조회 API
+// 게시글 상세 조회 API
 router.get("/posts/:postId", async (req, res) => {
     const {postId} = req.params;
     const [detail] = await Posts.find({post_id: Number(postId)});
@@ -67,7 +67,7 @@ router.put("/posts/:postId", async (req, res) => {
             date: moment()
         }
     });
-    res.json({success: "true"});
+    res.json({success: true});
 });
 
 // 게시글 삭제 API
@@ -75,7 +75,7 @@ router.delete("/posts/:postId", async (req, res) => {
     const {postId} = req.params;
 
     await Posts.deleteOne({post_id: Number(postId)});
-    res.json({result: "success"});
+    res.json({ success: true });
 });
 
 // =======================================================
