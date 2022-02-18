@@ -11,8 +11,7 @@ router.get("/posts", async (req, res) => {
     const posts = await Posts
         .find()
         .sort({ date: -1 });
-    console.log(posts);
-    res.json({posts: posts});
+    res.json({posts});
 });
 
 // 게시글 상세 조회 API
@@ -20,7 +19,6 @@ router.get("/posts/:postId", async (req, res) => {
     const {postId} = req.params;
     const [detail] = await Posts.find({post_id: Number(postId)});
 
-    //   console.log(moment(detail.date).format("YYYYMM.DD HH:mm:ss"));
     res.json({detail});
 });
 
@@ -85,7 +83,7 @@ router.get("/posts/:postId/comments", async (req, res) => {
     const comments = await Comments
         .find({post_id: postId})
         .sort({date: -1});
-    res.json({comments: comments});
+    res.json({comments});
 });
 
 // 댓글 작성 API

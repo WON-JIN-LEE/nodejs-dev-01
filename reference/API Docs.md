@@ -1,7 +1,7 @@
 # API docs
 
 ## 📋 게시판
-
+ 
 <details>
   <summary>전체 목록 조회 API</summary>
 
@@ -34,7 +34,7 @@
 - Payload:
     
     ```jsx
-    { name: string, title: string, content: string, date: date, post_id: number }
+    { name: string, title: string, content: string, date: string, post_id: number }
     ```
     </details>
 
@@ -122,7 +122,7 @@ ___
 - HTTP Status Code: `200`
 - Payload:
     ```jsx
-    { name: string, comment: string, date: date, post_id: number, comment_id: number }[]
+    { name: string, comment: string, date: string, post_id: number, comment_id: number }[]
     ```
 </details>
 
