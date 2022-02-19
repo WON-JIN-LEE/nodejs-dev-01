@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require("cors");
 
 // index 파일명은 생략가능
 const connet = require("./schemas");
@@ -15,6 +16,7 @@ const requestMiddleware = (req, res, next) => {
   next();
 };
 
+app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(requestMiddleware);
