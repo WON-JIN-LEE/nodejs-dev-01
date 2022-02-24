@@ -91,7 +91,7 @@
 
 ### Request
 
-- Method: `PUT`
+- Method: `DELETE`
 - URL: `/posts/:postId`
 
 ### Response
